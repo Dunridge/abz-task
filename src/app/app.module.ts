@@ -3,10 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { BodyComponent } from './body/body.component';
+import { SignUpComponent } from './body/sign-up/sign-up.component';
+import { RelationshipsComponent } from './body/relationships/relationships.component';
+import { RequirementsComponent } from './body/requirements/requirements.component';
+import { UsersComponent } from './body/users/users.component';
+import { AboutMeComponent } from './body/about-me/about-me.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    BodyComponent,
+    SignUpComponent,
+    RelationshipsComponent,
+    RequirementsComponent,
+    UsersComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,
