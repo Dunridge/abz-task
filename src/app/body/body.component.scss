@@ -1,4 +1,38 @@
 
+.assignment {
+  height: 750px;
+  background: url('../../assets/banner-photo.jpg');
+  background-size: cover;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.assignment > * {
+  margin-left: 40px;
+}
+
+.assignment__title {
+  font-size: 50px;
+  display: block;
+}
+
 .assignment__requirements {
+  width: 44%;
+}
+
+.assignment__title {
   width: 52%;
+}
+
+.sign-up {
+  margin-top: 46px;
+  height: 46px;
+  width: 262px;
+  background-color: #EF5B4C;
+  font-size: 20px;
+  color: white;
 }
