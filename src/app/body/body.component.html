@@ -11,7 +11,7 @@
     area on the different screens
   </div>
 <!--  TODO: this block is reused in the registration section-->
-  <button class="sign-up --no-outline --pointer-cursor --btn-border">Sign up now</button>
+  <button routerLink="/sign-up" class="sign-up --no-outline --pointer-cursor --btn-border">Sign up now</button>
 </div>
 
 <div class="acquaintance">
@@ -37,21 +37,21 @@
 
       </div>
 
-      <div class="acquaintance__sign-up">Sign up now</div>
-<!--      <div class="sign-up sign-up&#45;&#45;no-background &#45;&#45;no-outline &#45;&#45;pointer-cursor &#45;&#45;btn-border">Sign up now</div>-->
-
+      <div routerLink="/sign-up" class="acquaintance__sign-up --no-outline --pointer-cursor">Sign up now</div>
     </div>
   </div>
 </div>
 
 <div class="users">
+  <div class="users__title-container">
+    <div class="users__title">Our cheerful users</div>
+    <div class="users__attention">Attention! Sorting users by registration date</div>
+  </div>
   <!--  TODO: add them to a wrapping div so that more users can be added dynamically-->
   <div class="users__container">
-    <app-user></app-user>
-    <app-user></app-user>
-    <app-user></app-user>
+    <app-user *ngFor="let user of users" [user]="user"></app-user>
   </div>
-  <button class="users__button">Show more</button>
+  <button class="users__button --no-outline --pointer-cursor --btn-border">Show more</button>
 </div>
 
 <div class="registration">
