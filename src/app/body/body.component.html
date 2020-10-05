@@ -49,7 +49,7 @@
   </div>
   <!--  TODO: add them to a wrapping div so that more users can be added dynamically-->
   <div class="users__container">
-    <app-user *ngFor="let user of users" [user]="user"></app-user>
+    <app-user *ngFor="let user of users" [user]="user" class="user"></app-user>
   </div>
   <button class="users__button --no-outline --pointer-cursor --btn-border">Show more</button>
 </div>
@@ -57,18 +57,18 @@
 <div class="registration">
   <div class="registration__header">
     <div class="registration__title">
-
+      Register to work
     </div>
     <div class="registration__warning">
-
+      <span>Attention! After successful registration and alert update the </span><span>list of users in the block from the top</span>
     </div>
   </div>
   <div class="registration__form">
-    <!--    TODO: add a reactive form here-->
+    <!--    TODO: add a reactive form here - see How to define a reactive form from course files in Trello-->
   </div>
 </div>
 
 <div class="footer">
-  <div class="footer__copyright"></div>
-  <div class="footer__page-purpose"></div>
+  <div class="footer__copyright">© abz.agency</div>
+  <div class="footer__page-purpose">specially for the test task</div>
 </div>
