@@ -64,7 +64,18 @@
     </div>
   </div>
   <div class="registration__form">
-    <!--    TODO: add a reactive form here - see How to define a reactive form from course files in Trello-->
+    <form [formGroup]="feedbackForm" class="registration__form-definition">
+      <mat-form-field>
+        <input matInput type="text" formControlName="name">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" formControlName="email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" formControlName="phoneNumber">
+      </mat-form-field>
+      <button (click)="onSubmit()">Sign up now</button>
+    </form>
   </div>
 </div>
 

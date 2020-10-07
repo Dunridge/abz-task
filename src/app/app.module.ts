@@ -11,6 +11,10 @@ import { RequirementsComponent } from './body/requirements/requirements.componen
 import { UsersComponent } from './body/users/users.component';
 import { AboutMeComponent } from './body/about-me/about-me.component';
 import { UserComponent } from './body/users/user/user.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -24,10 +28,14 @@ import { UserComponent } from './body/users/user/user.component';
     AboutMeComponent,
     UserComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        NoopAnimationsModule,
+        MatFormFieldModule,
+        MatInputModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
