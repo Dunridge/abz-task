@@ -15,6 +15,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
+import {MatOptionModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {MatInputModule} from '@angular/material/input';
         NoopAnimationsModule,
         MatFormFieldModule,
         MatInputModule,
+        MatOptionModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

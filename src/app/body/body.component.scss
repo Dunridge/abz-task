@@ -127,7 +127,7 @@
 }
 
 .registration {
-  height: 700px;
+  height: 760px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -158,5 +158,41 @@
 .registration__form-definition {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
+
+input {
+  border: 1px solid black;
+  width: 420px;
+  padding: 5px;
+  height: 44px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 14px;
+}
+
+mat-form-field {
+  width: 420px;
+}
+
+.sign-up__form {
+  margin: 0 auto;
+}
+
+.registration__input-settings {
+  position: relative;
+  top: 24px;
+}
+
+.footer__copyright {
+  margin-right: 6px;
+}
+
+mat-form-field {
+  padding-bottom: 0;
+}
+
+.registration__sign-up {
+  margin-top: 30px;
+}
+

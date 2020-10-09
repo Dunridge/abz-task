@@ -10,7 +10,7 @@
     requirements. We look forward to your submission. Good luck! The photo has to scale in the banner
     area on the different screens
   </div>
-<!--  TODO: this block is reused in the registration section-->
+  <!--  TODO: this block is reused in the registration section-->
   <button routerLink="/sign-up" class="sign-up --no-outline --pointer-cursor --btn-border">Sign up now</button>
 </div>
 
@@ -65,21 +65,51 @@
   </div>
   <div class="registration__form">
     <form [formGroup]="feedbackForm" class="registration__form-definition">
-      <mat-form-field>
-        <input matInput type="text" formControlName="name">
+      <label for="name" class="registration__input-settings">Name</label>
+      <mat-form-field floatLabel="never" appearance="standard">
+        <input matInput
+               type="text"
+               name="name"
+               formControlName="name"
+               placeholder="Your name">
       </mat-form-field>
-      <mat-form-field>
-        <input matInput type="text" formControlName="email">
+      <label for="email" class="registration__input-settings">Email</label>
+      <mat-form-field floatLabel="never" appearance="standard">
+        <input matInput
+               type="text"
+               name="email"
+               formControlName="email"
+               placeholder="Your email">
       </mat-form-field>
-      <mat-form-field>
-        <input matInput type="text" formControlName="phoneNumber">
+      <label for="phoneNumber" class="registration__input-settings">Phone number</label>
+      <mat-form-field floatLabel="never" appearance="standard">
+        <input matInput
+               type="text"
+               name="phoneNumber"
+               formControlName="phoneNumber"
+               placeholder="+380 XX XXX XX XX">
+        <mat-hint>Enter phone number in open format</mat-hint>
       </mat-form-field>
-      <button (click)="onSubmit()">Sign up now</button>
+
+<!--      <mat-form-field>-->
+<!--        <mat-select>-->
+<!--          <mat-option></mat-option>-->
+<!--        </mat-select>-->
+<!--      </mat-form-field>-->
+<!--      <mat-form-field>-->
+<!--        -->
+<!--      </mat-form-field>-->
+
+<!--      <mat-form-field>-->
+
+<!--      </mat-form-field>-->
+
+      <button (click)="onSubmit()" class="sign-up sign-up__form --no-outline --pointer-cursor --btn-border registration__sign-up">Sign up now</button>
     </form>
   </div>
 </div>
 
 <div class="footer">
   <div class="footer__copyright">© abz.agency</div>
-  <div class="footer__page-purpose">specially for the test task</div>
+  <div class="footer__page-purpose"> specially for the test task</div>
 </div>
