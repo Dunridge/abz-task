@@ -14,7 +14,7 @@ export class BodyComponent implements OnInit {
 
   users: User[] = USERS;
   positions: string[] = POSITIONS;
-  public selection: string;
+  public selection = '';
   public defaultSelected = 'Frontend developer';
 
   feedback: UserForm;
@@ -32,12 +32,14 @@ export class BodyComponent implements OnInit {
     this.feedbackForm = this.fb.group({
       name: '',
       email: '',
-      phoneNumber: ''
+      phoneNumber: '',
+      position: ''
     });
   }
 
   onSubmit(): void {
     this.feedback = this.feedbackForm.value;
+    // this.feedback.position = positions[selection];
     console.log(this.feedback);
     this.feedbackForm.reset();
   }

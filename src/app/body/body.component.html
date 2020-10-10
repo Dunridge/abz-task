@@ -65,29 +65,35 @@
   </div>
   <div class="registration__form">
     <form [formGroup]="feedbackForm" class="registration__form-definition">
-      <label for="name" class="registration__input-settings">Name</label>
+      <p class="registration__input-settings">Name</p>
       <mat-form-field floatLabel="never" appearance="standard">
-        <input matInput
-               type="text"
-               name="name"
-               formControlName="name"
-               placeholder="Your name">
+        <label>
+          <input matInput
+                 type="text"
+                 name="name"
+                 formControlName="name"
+                 placeholder="Your name">
+        </label>
       </mat-form-field>
-      <label for="email" class="registration__input-settings">Email</label>
+      <p class="registration__input-settings">Email</p>
       <mat-form-field floatLabel="never" appearance="standard">
-        <input matInput
-               type="text"
-               name="email"
-               formControlName="email"
-               placeholder="Your email">
+        <label>
+          <input matInput
+                 type="text"
+                 name="email"
+                 formControlName="email"
+                 placeholder="Your email">
+        </label>
       </mat-form-field>
-      <label for="phoneNumber" class="registration__input-settings">Phone number</label>
+      <p class="registration__input-settings">Phone number</p>
       <mat-form-field floatLabel="never" appearance="standard">
-        <input matInput
-               type="text"
-               name="phoneNumber"
-               formControlName="phoneNumber"
-               placeholder="+380 XX XXX XX XX">
+        <label>
+          <input matInput
+                 type="text"
+                 name="phoneNumber"
+                 formControlName="phoneNumber"
+                 placeholder="+380 XX XXX XX XX">
+        </label>
         <mat-hint>Enter phone number in open format</mat-hint>
       </mat-form-field>
       <p>Select your position: </p>
@@ -98,8 +104,8 @@
           </mat-radio-button>
         </mat-list-item>
       </mat-list>
-      <p>{{positions[selection]}}</p>
-
+<!--      <p>{{selection}}</p>-->
+<!--      <p>{{positions[selection]}}</p>-->
 
       <button (click)="onSubmit()" class="sign-up sign-up__form --no-outline --pointer-cursor --btn-border registration__sign-up">Sign up now</button>
     </form>
