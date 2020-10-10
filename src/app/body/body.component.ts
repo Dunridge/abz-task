@@ -39,7 +39,7 @@ export class BodyComponent implements OnInit {
 
   onSubmit(): void {
     this.feedback = this.feedbackForm.value;
-    // this.feedback.position = positions[selection];
+    this.feedback.position = this.positions[this.selection];
     console.log(this.feedback);
     this.feedbackForm.reset();
   }
