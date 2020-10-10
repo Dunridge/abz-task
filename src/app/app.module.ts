@@ -18,6 +18,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatOptionModule} from '@angular/material/core';
 import {MatListModule} from '@angular/material/list';
 import {MatRadioModule} from '@angular/material/radio';
+import { AssignmentComponent } from './body/sections/assignment/assignment.component';
+import { AcquaintanceComponent } from './body/sections/acquaintance/acquaintance.component';
+import { RegistrationComponent } from './body/sections/registration/registration.component';
+import { FooterComponent } from './body/sections/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import {MatRadioModule} from '@angular/material/radio';
     RequirementsComponent,
     UsersComponent,
     AboutMeComponent,
-    UserComponent
+    UserComponent,
+    AssignmentComponent,
+    AcquaintanceComponent,
+    RegistrationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
