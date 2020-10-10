@@ -9,6 +9,11 @@ import {SignUpComponent} from './body/sign-up/sign-up.component';
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/home'
+  },
+  {
     path: 'home',
     component: BodyComponent
   },

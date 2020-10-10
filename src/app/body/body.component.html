@@ -90,19 +90,16 @@
                placeholder="+380 XX XXX XX XX">
         <mat-hint>Enter phone number in open format</mat-hint>
       </mat-form-field>
+      <p>Select your position: </p>
+      <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let position of positions; let i = index">
+          <mat-radio-button color="primary" [checked]="i == defaultSelected" [value]="i"  (change)="selection = $event.value">
+            {{position}}
+          </mat-radio-button>
+        </mat-list-item>
+      </mat-list>
+      <p>{{positions[selection]}}</p>
 
-<!--      <mat-form-field>-->
-<!--        <mat-select>-->
-<!--          <mat-option></mat-option>-->
-<!--        </mat-select>-->
-<!--      </mat-form-field>-->
-<!--      <mat-form-field>-->
-<!--        -->
-<!--      </mat-form-field>-->
-
-<!--      <mat-form-field>-->
-
-<!--      </mat-form-field>-->
 
       <button (click)="onSubmit()" class="sign-up sign-up__form --no-outline --pointer-cursor --btn-border registration__sign-up">Sign up now</button>
     </form>
