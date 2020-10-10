@@ -107,15 +107,14 @@
       </mat-list>
 
       <p class="registration__position-selection position-selection--shift-bottom">Photo </p>
-      <mat-form-field floatLabel="never" appearance="standard" (click)="uploadPhoto()">
-        <label class="registration__choose-photo">
-          <!--          TODO: see how to upload images in Angular-->
+      <mat-form-field floatLabel="never" appearance="standard">
+        <label class="registration__choose-photo" (click)="fileInput.click()">
           <input matInput
                  type="text"
                  placeholder="Upload your photo"
                  class="registration__photo-input"
                  autocomplete="off">
-          <button class="registration__browse-btn">Browse</button>
+          <button class="registration__browse-btn"><input type="file" id="browse" style="display: none" (change)="onFileChanged($event)" #fileInput>Browse</button>
         </label>
       </mat-form-field>
 
