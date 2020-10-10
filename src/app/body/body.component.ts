@@ -43,4 +43,8 @@ export class BodyComponent implements OnInit {
     console.log(this.feedback);
     this.feedbackForm.reset();
   }
+
+  uploadPhoto(): void {
+    console.log('photo uploaded');
+  }
 }

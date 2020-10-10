@@ -96,16 +96,32 @@
         </label>
         <mat-hint>Enter phone number in open format</mat-hint>
       </mat-form-field>
-      <p>Select your position: </p>
+      <p class="registration__position-selection">Select your position: </p>
       <mat-list role="list">
         <mat-list-item role="listitem" *ngFor="let position of positions; let i = index">
-          <mat-radio-button color="primary" [checked]="i == defaultSelected" [value]="i"  (change)="selection = $event.value">
+          <mat-radio-button color="primary" [checked]="i == defaultSelected" [value]="i"
+                            (change)="selection = $event.value">
             {{position}}
           </mat-radio-button>
         </mat-list-item>
       </mat-list>
 
-      <button (click)="onSubmit()" class="sign-up sign-up__form --no-outline --pointer-cursor --btn-border registration__sign-up">Sign up now</button>
+      <p class="registration__position-selection position-selection--shift-bottom">Photo </p>
+      <mat-form-field floatLabel="never" appearance="standard" (click)="uploadPhoto()">
+        <label class="registration__choose-photo">
+          <!--          TODO: see how to upload images in Angular-->
+          <input matInput
+                 type="text"
+                 placeholder="Upload your photo"
+                 class="registration__photo-input"
+                 autocomplete="off">
+          <button class="registration__browse-btn">Browse</button>
+        </label>
+      </mat-form-field>
+
+      <button (click)="onSubmit()"
+              class="sign-up sign-up__form --no-outline --pointer-cursor --btn-border registration__sign-up">Sign up now
+      </button>
     </form>
   </div>
 </div>
