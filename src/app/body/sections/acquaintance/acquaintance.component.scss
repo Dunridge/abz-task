@@ -1,0 +1,36 @@
+.acquaintance {
+  height: 720px;
+  padding-bottom: 190px;
+}
+
+.acquaintance__title {
+  padding-top: 180px;
+  font-size: 52px;
+  text-align: center;
+  margin-bottom: 100px;
+  position: relative;
+  right: 8%;
+}
+
+.acquaintance__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.acquaintance__information {
+  width: 54%;
+  margin-left: 48px;
+}
+
+.acquaintance__sign-up {
+  color: #EF5B4C;
+  margin-top: 40px;
+}
+
+.acquaintance__info-title {
+  margin: 0 0 32px 0;
+  font-size: 22px;
+  font-weight: 325;
+}

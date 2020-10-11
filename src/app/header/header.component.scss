@@ -1,0 +1,36 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  background: white;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1001;
+}
+
+.header__emblem {
+  display: flex;
+  align-items: center;
+  padding-left: 38px;
+}
+
+//.header__text {
+//  padding-left: 12px;
+//  text-transform: uppercase;
+//  color: #2A2E32;
+//  letter-spacing: 5px;
+//}
+
+.header__router-links {
+  width: 36%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header__router-links > div {
+  padding-right: 36px;
+}

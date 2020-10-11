@@ -1,0 +1,71 @@
+<div class="registration">
+  <div class="registration__header">
+    <div class="registration__title">
+      Register to work
+    </div>
+    <div class="registration__warning">
+      <span>Attention! After successful registration and alert update the </span><span>list of users in the block from the top</span>
+    </div>
+  </div>
+  <div class="registration__form">
+    <form [formGroup]="feedbackForm" class="registration__form-definition">
+      <p class="registration__input-settings">Name</p>
+      <mat-form-field floatLabel="never" appearance="standard">
+        <label>
+          <input matInput
+                 type="text"
+                 name="name"
+                 formControlName="name"
+                 placeholder="Your name">
+        </label>
+      </mat-form-field>
+      <p class="registration__input-settings">Email</p>
+      <mat-form-field floatLabel="never" appearance="standard">
+        <label>
+          <input matInput
+                 type="text"
+                 name="email"
+                 formControlName="email"
+                 placeholder="Your email">
+        </label>
+      </mat-form-field>
+      <p class="registration__input-settings">Phone number</p>
+      <mat-form-field floatLabel="never" appearance="standard">
+        <label>
+          <input matInput
+                 type="text"
+                 name="phoneNumber"
+                 formControlName="phoneNumber"
+                 placeholder="+380 XX XXX XX XX">
+        </label>
+        <mat-hint>Enter phone number in open format</mat-hint>
+      </mat-form-field>
+      <p class="registration__position-selection">Select your position: </p>
+      <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let position of positions; let i = index">
+          <mat-radio-button color="primary" [checked]="i == defaultSelected" [value]="i"
+                            (change)="selection = $event.value">
+            {{position}}
+          </mat-radio-button>
+        </mat-list-item>
+      </mat-list>
+
+      <p class="registration__position-selection position-selection--shift-bottom">Photo </p>
+      <mat-form-field floatLabel="never" appearance="standard">
+        <label class="registration__choose-photo" (click)="fileInput.click()">
+          <input matInput
+                 type="text"
+                 placeholder="Upload your photo"
+                 class="registration__photo-input"
+                 id="photo-input"
+                 autocomplete="off">
+          <button class="registration__browse-btn"><input type="file" id="browse" style="display: none" (change)="onFileChanged($event)" #fileInput>Browse</button>
+        </label>
+      </mat-form-field>
+
+      <button (click)="onSubmit()"
+              class="sign-up sign-up__form --no-outline --pointer-cursor --btn-border registration__sign-up">Sign up now
+      </button>
+    </form>
+  </div>
+</div>
