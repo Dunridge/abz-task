@@ -1,10 +1,11 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject, OnInit, Renderer2} from '@angular/core';
 import {User} from '../../../../interfaces/user';
 import {USERS} from '../../../../model/users';
 import {POSITIONS} from '../../../../model/positions';
 import {UserForm} from '../../../../interfaces/user-form';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {DOCUMENT} from '@angular/common';
+import {element} from 'protractor';
 
 @Component({
   selector: 'app-registration',
@@ -25,7 +26,8 @@ export class RegistrationComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    private renderer: Renderer2
   ) {
     this.createForm();
   }
@@ -56,6 +58,8 @@ export class RegistrationComponent implements OnInit {
     console.log($event);
     // @ts-ignore
     this.selectedFile = $event.target.files[0];
+    console.log(this.selectedFile.name);
+    this.renderer.setAttribute(this.document.getElementById('photo-input'), 'placeholder', this.selectedFile.name);
   }
 
 }
