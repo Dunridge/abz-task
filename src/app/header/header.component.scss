@@ -4,16 +4,11 @@
   justify-content: space-between;
   height: 72px;
   background: white;
-  position: static;
+  position: fixed;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 1001;
-  &.fixed {
-    // Styles for a fixed header
-  }
-
-  //padding-top: 10px;
 }
 
 .header__emblem {
