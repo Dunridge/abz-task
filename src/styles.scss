@@ -42,3 +42,14 @@ body::-webkit-scrollbar {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.sign-up {
+  margin-top: 46px;
+  height: 46px;
+  width: 262px;
+  background-color: #EF5B4C;
+  font-size: 20px;
+  color: white;
+  display: grid;
+  place-items: center;
+}
