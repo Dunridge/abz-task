@@ -1,1 +1,11 @@
-<p>users works!</p>
+<div class="users">
+  <div class="users__title-container">
+    <div class="users__title">Our cheerful users</div>
+    <div class="users__attention">Attention! Sorting users by registration date</div>
+  </div>
+  <!--  TODO: add them to a wrapping div so that more users can be added dynamically-->
+  <div class="users__container">
+    <app-user *ngFor="let user of users" [user]="user" class="user"></app-user>
+  </div>
+  <button class="users__button --no-outline --pointer-cursor --btn-border">Show more</button>
+</div>

@@ -4,7 +4,7 @@ import {BodyComponent} from './body/body.component';
 import {AboutMeComponent} from './body/about-me/about-me.component';
 import {RelationshipsComponent} from './body/relationships/relationships.component';
 import {RequirementsComponent} from './body/requirements/requirements.component';
-import {UsersComponent} from './body/users/users.component';
+// import {UsersComponent} from './body/users/users.component';
 import {SignUpComponent} from './body/sign-up/sign-up.component';
 
 const routes: Routes = [
@@ -31,7 +31,7 @@ const routes: Routes = [
   },
   {
     path: 'users',
-    component: UsersComponent
+    component: SignUpComponent
   },
   {
     path: 'sign-up',
