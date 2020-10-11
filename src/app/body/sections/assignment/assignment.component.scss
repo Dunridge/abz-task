@@ -1,0 +1,28 @@
+.assignment {
+  height: 750px;
+  background: url('../assets/banner-photo.jpg');
+  background-size: cover;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.assignment > * {
+  margin-left: 40px;
+}
+
+.assignment__title {
+  font-size: 50px;
+  display: block;
+}
+
+.assignment__requirements {
+  width: 44%;
+}
+
+.assignment__title {
+  width: 52%;
+}
