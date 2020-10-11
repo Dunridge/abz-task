@@ -21,10 +21,8 @@ export class HeaderComponent implements OnInit {
       this.navFixed = false;
       document.getElementById('header-element').style.position = 'static';
     } else {
-      // document.getElementById('header-element').style.position = 'fixed';
       const headerElem = document.getElementById('header-element');
       headerElem.style.position = 'fixed';
-      // headerElem.style.zIndex = '100';
     }
   }
 
