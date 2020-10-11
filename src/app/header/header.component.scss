@@ -2,8 +2,18 @@
 .header {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   height: 72px;
+  background: white;
+  position: static;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1001;
+  &.fixed {
+    // Styles for a fixed header
+  }
+
+  //padding-top: 10px;
 }
 
 .header__emblem {
